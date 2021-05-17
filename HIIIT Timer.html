@@ -12,49 +12,61 @@
         <img class="card-img-top mx-auto img-fluid" id="cardImg" src="C:\Users\hughe\OneDrive\Desktop\Web Dev\HIIT-Timer\Air Bike.jpg" alt="A man exercises on an Air Bike">
         <div class="card-body">
             <div class="card-title">HIIT Timer</div>
-            <p class="card-text">Use the dropdown menu below to select how long you would like to workout for. Use the buttons below to select your working/rest interval split.</p>
+            <p class="card-text">Use the dropdown menu below to select how long you would like to workout for.</p>
+            <p class="card-text">Use the Start button to start your workout with a 10sec delay, the Pause button to pause your workout, and the Reset button to reset the app.</p>
+            <p class="card-text">The background color of this page will change to green or red, to reflect whether you are on a rest period or a working period.</p>
+            <!--In future iterations of this project, add the option for the user to choose their interval split, 1min/1min, 1min/30secs, etc.-->
+            <!--Use this text that you wrote earlier: Use the buttons below to select your working/rest interval split.-->
 
-            <div id="timer-div">
+            <div class="container" id="timer-div">
                 <!--This will be where the timer is located.-->
+                <p class="countdown">00 : 00</p>
+                
+                <!--May not need separate states to start. Have the timer be independent, and a function? that monitors it, and changes the background color at minute intervals.-->
             </div>
-
+            
+          <form class="form">
             <label for="workout-time">How long would you like to work out?</label>
-            <select name="" id="workout-time" class="form-select">
+            <select name="" id="workoutTime" class="form-select">
                 <option selected>Open to choose how long to work out!</option>
-                <option value="2">Two Minutes</option>
-                <option value="3">Three Minutes</option>
-                <option value="4">Four Minutes</option>
-                <option value="5">Five Minutes</option>
-                <option value="6">Six Minutes</option>
-                <option value="7">Seven Minutes</option>
-                <option value="8">Eight Minutes</option>
-                <option value="9">Nine Minutes</option>
-                <option value="10">Ten Minutes</option>
-                <option value="11">Eleven Minutes</option>
-                <option value="12">Twelve Minutes</option>
-                <option value="13">Thirteen Minutes</option>
-                <option value="14">Fourteen Minutes</option>
-                <option value="15">Fifteen Minutes</option>
-                <option value="16">Sixteen Minutes</option>
-                <option value="17">Seventeen Minutes</option>
-                <option value="18">Eighteen Minutes</option>
-                <option value="19">Nineteen Minutes</option>
-                <option value="20">Twenty Minutes</option>
-                <option value="21">Twenty One Minutes</option>
-                <option value="22">Twenty Two Minutes</option>
-                <option value="23">Twenty Three Minutes</option>
-                <option value="24">Twenty Four Minutes</option>
-                <option value="25">Twenty Five Minutes</option>
-                <option value="26">Twenty Six Minutes</option>
-                <option value="27">Twenty Seven Minutes</option>
-                <option value="28">Twenty Eight Minutes</option>
-                <option value="29">Twenty Nine Minutes</option>
-                <option value="30">Thirty Minutes</option>
+                <option class="timerSelect" value="2">Two Minutes</option>
+                <option class="timerSelect" value="3">Three Minutes</option>
+                <option class="timerSelect" value="4">Four Minutes</option>
+                <option class="timerSelect" value="5">Five Minutes</option>
+                <option class="timerSelect" value="6">Six Minutes</option>
+                <option class="timerSelect" value="7">Seven Minutes</option>
+                <option class="timerSelect" value="8">Eight Minutes</option>
+                <option class="timerSelect" value="9">Nine Minutes</option>
+                <option class="timerSelect" value="10">Ten Minutes</option>
+                <option class="timerSelect" value="11">Eleven Minutes</option>
+                <option class="timerSelect" value="12">Twelve Minutes</option>
+                <option class="timerSelect" value="13">Thirteen Minutes</option>
+                <option class="timerSelect" value="14">Fourteen Minutes</option>
+                <option class="timerSelect" value="15">Fifteen Minutes</option>
+                <option class="timerSelect" value="16">Sixteen Minutes</option>
+                <option class="timerSelect" value="17">Seventeen Minutes</option>
+                <option class="timerSelect" value="18">Eighteen Minutes</option>
+                <option class="timerSelect" value="19">Nineteen Minutes</option>
+                <option class="timerSelect" value="20">Twenty Minutes</option>
+                <option class="timerSelect" value="21">Twenty One Minutes</option>
+                <option class="timerSelect" value="22">Twenty Two Minutes</option>
+                <option class="timerSelect" value="23">Twenty Three Minutes</option>
+                <option class="timerSelect" value="24">Twenty Four Minutes</option>
+                <option class="timerSelect" value="25">Twenty Five Minutes</option>
+                <option class="timerSelect" value="26">Twenty Six Minutes</option>
+                <option class="timerSelect" value="27">Twenty Seven Minutes</option>
+                <option class="timerSelect" value="28">Twenty Eight Minutes</option>
+                <option class="timerSelect" value="29">Twenty Nine Minutes</option>
+                <option class="timerSelect" value="30">Thirty Minutes</option>
             </select>
 
-            <button type="button" class="btn btn-primary" id="startButton">Start your workout!</button>
-            <button type="button" class="btn btn-secondary" id="pauseButton">Pause</button>
-            <button type="button" class="btn btn-danger" id="resetButton">Reset</button>
+            <button type="submit" class="set-btn">Set Time</button>
+          </form>
+
+          <div class="buttons">
+            <button type="button" class="btn btn-primary stop-btn" id="stopButton" disabled>Start your workout!</button>
+            <button type="button" class="btn btn-danger reset-btn" id="resetButton" disabled>Reset</button>
+          </div>
         </div>
     </div>
 

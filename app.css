@@ -1,3 +1,48 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+}
+
+body {
+  color: #fbfcff;
+}
+
 #cardSelector {
-  width: 30rem;
+  width: 40rem;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: 1px solid black;
+  border-radius: 15px;
+  background-color: #1c6e8c;
+}
+
+#cardImg {
+  border-radius: 15px 15px 0 0;
+  width: 638px;
+  height: 400px;
+}
+
+#workout-time {
+  margin-bottom: 10px;
+}
+
+.btn {
+  border: 1px solid black;
+  text-align: center;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 15px;
+}
+
+.card-title {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+#timer-div {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 10px;
 }
