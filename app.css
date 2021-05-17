@@ -10,8 +10,8 @@ body {
 
 #cardSelector {
   width: 40rem;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   border: 1px solid black;
   border-radius: 15px;
   background-color: #1c6e8c;
@@ -20,11 +20,20 @@ body {
 #cardImg {
   border-radius: 15px 15px 0 0;
   width: 638px;
-  height: 400px;
+  height: 300px;
 }
 
-#workout-time {
+#workoutTime {
   margin-bottom: 10px;
+}
+
+#timeSelect {
+  margin-bottom: 10px;
+}
+
+#setTimeBtn {
+  margin-bottom: 10px;
+  background-color: #aeecef;
 }
 
 .btn {
@@ -45,4 +54,9 @@ body {
   font-weight: bold;
   text-align: center;
   padding-bottom: 10px;
+}
+
+.countdown {
+  margin: 20px;
+  font-size: 2rem;
 }
