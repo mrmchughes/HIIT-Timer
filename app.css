@@ -6,42 +6,22 @@
 
 body {
   color: #fbfcff;
+  background-color: #86bbd8;
 }
 
 #cardSelector {
-  width: 40rem;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  width: 45rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
   border: 1px solid black;
   border-radius: 15px;
-  background-color: #1c6e8c;
+  background-color: #2f4858;
 }
 
 #cardImg {
   border-radius: 15px 15px 0 0;
-  width: 638px;
-  height: 300px;
-}
-
-#workoutTime {
-  margin-bottom: 10px;
-}
-
-#timeSelect {
-  margin-bottom: 10px;
-}
-
-#setTimeBtn {
-  margin-bottom: 10px;
-  background-color: #aeecef;
-}
-
-.btn {
-  border: 1px solid black;
-  text-align: center;
-  padding: 15px;
-  margin: 10px;
-  border-radius: 15px;
+  width: 45rem;
+  height: 15rem;
 }
 
 .card-title {
@@ -51,12 +31,53 @@ body {
 
 #timer-div {
   font-size: 3rem;
-  font-weight: bold;
   text-align: center;
-  padding-bottom: 10px;
 }
 
-.countdown {
-  margin: 20px;
-  font-size: 2rem;
+div.controls {
+  padding: 5px;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+#settings {
+  padding: 10px;
+}
+
+input {
+  background: #f6ae2d;
+  padding: 10px;
+  width: 75px;
+  text-align: center;
+  border-radius: 15px;
+}
+
+#status {
+  font-size: 3.5rem;
+  letter-spacing: 1.5px;
+  margin: 5px;
+}
+
+#sec {
+  font-size: 3rem;
+  margin: 5px;
+}
+
+.btn {
+  border: 1px solid black;
+  text-align: center;
+  padding: 15px;
+  margin: 10px;
+  font-size: 1rem;
+  border-radius: 20px;
+  background: #f6ae2d;
+  transition: color 0.25s, border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+}
+
+.btn:hover {
+  border-color: #de3c4b;
+  color: black;
+  box-shadow: 0 0.5em 0.5em -0.4em #87f5fb;
+  transform: translateY(-0.25em);
+  cursor: pointer;
 }

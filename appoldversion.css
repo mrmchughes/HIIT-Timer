@@ -1,0 +1,62 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+}
+
+body {
+  color: #fbfcff;
+}
+
+#cardSelector {
+  width: 40rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  border-radius: 15px;
+  background-color: #1c6e8c;
+}
+
+#cardImg {
+  border-radius: 15px 15px 0 0;
+  width: 638px;
+  height: 300px;
+}
+
+#workoutTime {
+  margin-bottom: 10px;
+}
+
+#timeSelect {
+  margin-bottom: 10px;
+}
+
+#setTimeBtn {
+  margin-bottom: 10px;
+  background-color: #aeecef;
+}
+
+.btn {
+  border: 1px solid black;
+  text-align: center;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 15px;
+}
+
+.card-title {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+#timer-div {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.countdown {
+  margin: 20px;
+  font-size: 2rem;
+}

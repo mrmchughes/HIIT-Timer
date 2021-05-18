@@ -1,135 +1,77 @@
-/*Code taken and modified from: Aravind at https://thecodingpie.com/post/how-to-create-a-countdown-timer-in-javascript*/
+/*Code based off of http://http://kellylougheed.com/blog/a-javascript-timer-for-hiit-workouts/*/
+window.onload = function () {
 
-const form = document.querySelector('.form');
+  var seconds = 20;
+  var rest = true;
+  var interval;
 
-const timeInput = document.querySelector("select[name='workoutTime']");
-/* the select[name=''] was what cracked it for me, enabled me to use the dropdown and it's values. Need to remember this! */
+  var intervalTime = 20;
+  var breakTime = 10;
 
-const format = document.querySelector("select[name='format']");
+  var settingsButton = document.getElementById("settings");
+  var intervalInput = document.getElementById("workingTime");
+  var breakInput = document.getElementById("restTime");
 
-const setBtn = document.querySelector('.set-btn');
+  var startButton = document.getElementById("startButton");
+  var pauseButton = document.getElementById("pauseButton")
+  var resetButton = document.getElementById("resetButton");
 
-const countDown = document.querySelector('.countdown');
- 
-const stopBtn = document.querySelector('.stop-btn');
+  var statusDiv = document.getElementById("status");
+  var secondsSpan = document.getElementById("sec");
 
-const resetBtn = document.querySelector('.reset-btn');
-
-let countDownInterval;
-
-let secondsLeftms;
-
-let endTime;
-
-let stopBtnClicked = false;
-
-stopBtn.addEventListener('click', () => {
-  
-  stopBtnClicked = !stopBtnClicked;
-
-  if (stopBtnClicked === true) {
-    
-    stopBtn.innerHTML = 'PLAY';
-   
-    resetBtn.disabled = false;
-    
-    clearInterval(countDownInterval);
-  } else if (stopBtnClicked === false) {
-    
-    stopBtn.innerHTML = 'STOP';
-    
-    resetBtn.disabled = true;
-    
-    endTime = secondsLeftms + Date.now();
-    
-    countDownInterval = setInterval(() => {
-      setCountDown(endTime);
-    }, 1000);
+  settingsButton.onclick = function() {
+    intervalTime = Math.floor(intervalInput.value * 1);
+    breakTime = Math.floor(breakInput.value * 1);
+    reset();
   }
-});
 
-resetBtn.addEventListener('click', () => {
-  resetCountDown();
-});
+  startButton.onclick = function () {
+    rest = false;
+    changeToWork();
+    interval = setInterval(countdownSeconds, 1000);
+  }
 
-form.addEventListener('submit', (event) => {
-  
-  event.preventDefault();
+  resetButton.onclick = function () {
+    reset();
+  }
 
-  let countDownTime = timeInput.value;
+  function reset() {
+    clearInterval(interval);
+    seconds = intervalTime;
+    secondsSpan.innerText = seconds;
+    rest = true;
+    changeToRest();
+  }
 
-  if (countDownTime > 0) {
-    
-    if (format.value === 'hours') {
-      
-      countDownTime = countDownTime * 3600000;
-    } else if (format.value === 'minutes') {
-      
-      countDownTime = countDownTime * 60000;
-    } else if (format.value === 'seconds') {
-      
-      countDownTime = countDownTime * 1000;
+  pauseButton.onclick = function() {
+    clearInterval(interval);
+  }
+
+  function countdownSeconds() {
+    seconds -= 1;
+    secondsSpan.innerText = seconds;
+    checkForStateChange();
+  }
+
+  function checkForStateChange() {
+    if (seconds == 0 && rest == false) {
+      seconds = breakTime + 1;
+      rest = true;
+      changeToRest();
+    } else if (seconds == 0 && rest == true) {
+      seconds = intervalTime + 1;
+      rest = false;
+      changeToWork();
     }
-
-    
-    const now = Date.now();
-    
-    endTime = now + countDownTime;
-
-    setCountDown(endTime);
-
-    countDownInterval = setInterval(() => {
-      setCountDown(endTime);
-    }, 1000);
-
-    setBtn.disabled = true;
-    
-    stopBtn.disabled = false;
   }
 
-});
-
-const setCountDown = (endTime) => {
-  
-  secondsLeftms = endTime - Date.now();
-  
-  const secondsLeft = Math.round(secondsLeftms / 1000);
-
-  let hours = Math.floor(secondsLeft / 3600);
-  let minutes = Math.floor(secondsLeft / 60) - (hours * 60);
-  let seconds = secondsLeft % 60;
-
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
-  if (seconds < 10) {
-    seconds = `0${seconds}`;
-  }
- 
-  if (secondsLeft < 0) {
-    resetCountDown();
-    return;
+  function changeToRest() {
+    $("body").css("background", "#86BBD8");
+    statusDiv.innerText = "Rest Period";
   }
 
-  countDown.innerHTML = `${hours} : ${minutes} : ${seconds}`;
-
-};
-
-const resetCountDown = () => {
- 
-  clearInterval(countDownInterval);
-  
-  countDown.innerHTML = '00 : 00 : 00';
-  
-  stopBtnClicked = false;
-  
-  stopBtn.innerHTML = 'STOP';
-
-  setBtn.disabled = false;
-
-  stopBtn.disabled = true;
-  resetBtn.disabled = true;
-};
+  function changeToWork() {
+    $("body").css("background", "#F26419");
+    statusDiv.innerText = "Push Yourself!";
+  }
+}
