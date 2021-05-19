@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link rel="stylesheet" href="C:\Users\hughe\OneDrive\Desktop\Web Dev\HIIT-Timer\app.css">
+    <link rel="stylesheet" href="C:\Users\hughe\OneDrive\Desktop\Web Dev\HIIT-Timer\app.css"> 
     <title>HIIT Timer</title>
   </head>
   <body>
@@ -13,18 +13,13 @@
         <img class="card-img-top mx-auto img-fluid" id="cardImg" src="C:\Users\hughe\OneDrive\Desktop\Web Dev\HIIT-Timer\Air Bike Guy.jpeg" alt="A man exercises on an Air Bike">
         <div class="card-body">
             <div class="card-title text-center">HIIT Timer</div>
-            <p class="card-text">Use the input fields below to select your workout intervals. The Set button will then lock in the intervals you have selected. The Start button will start your workout on a working interval, the Pause button will pause your workout, and the Reset button will reset the app.</p>
             <!--with a 10sec delay (I want to include this in future versions (Get ready to start your workout! will be the text))-->
-
-            <p class="card-text">The background color of this page will change, to reflect on if you are on a rest or a working period.</p>
-            <!--In future iterations of this project, add the option for the user to choose their interval split, 1min/1min, 1min/30secs, etc.-->
-            <!--Use this text that you wrote earlier: Use the buttons below to select your working/rest interval split.-->
      
           <div class="controls text-center">
-            <input class="rounded-pill" id="workingTime" type="text" value="30">
+            <input id="workingTime" type="text" value="20">
             Work Intervals (Secs)
 
-            <input class="rounded-pill" id="restTime" type="text" value="60">
+            <input id="restTime" type="text" value="10">
             Rest Intervals (Secs)
           </div>
 
@@ -37,7 +32,7 @@
           </div>
 
           <div class="text-center">
-            <span id="sec">30</span>
+            <span id="sec">20</span>
           </div>
 
           <div class="text-center">
