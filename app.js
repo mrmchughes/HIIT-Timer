@@ -1,23 +1,23 @@
 /*Code based off of http://http://kellylougheed.com/blog/a-javascript-timer-for-hiit-workouts/*/
 window.onload = function () {
 
-  var seconds = 20;
-  var rest = true;
-  var interval;
+  let seconds = 20;
+  let rest = true;
+  let interval;
 
-  var intervalTime = 20;
-  var breakTime = 10;
+  let intervalTime = 20;
+  let breakTime = 10;
 
-  var settingsButton = document.getElementById("settings");
-  var intervalInput = document.getElementById("workingTime");
-  var breakInput = document.getElementById("restTime");
+  let settingsButton = document.getElementById("settings");
+  let intervalInput = document.getElementById("workingTime");
+  let breakInput = document.getElementById("restTime");
 
-  var startButton = document.getElementById("startButton");
-  var pauseButton = document.getElementById("pauseButton")
-  var resetButton = document.getElementById("resetButton");
+  let startButton = document.getElementById("startButton");
+  let pauseButton = document.getElementById("pauseButton")
+  let resetButton = document.getElementById("resetButton");
 
-  var statusDiv = document.getElementById("status");
-  var secondsSpan = document.getElementById("sec");
+  let statusDiv = document.getElementById("status");
+  let secondsSpan = document.getElementById("sec");
 
   settingsButton.onclick = function() {
     intervalTime = Math.floor(intervalInput.value * 1);
@@ -68,10 +68,14 @@ window.onload = function () {
   function changeToRest() {
     $("body").css("background", "#87f5fb");
     statusDiv.innerText = "Rest Period";
+    document.getElementById("cardImg").src = 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.PvRKtXc8nMb5F27zSVjp1AHaHa%26pid%3DApi&f=1';
   }
 
   function changeToWork() {
     $("body").css("background", "#de3c4b");
     statusDiv.innerText = "Push Yourself!";
+    document.getElementById("cardImg").src = 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.KYnkGOLCF2UhXr3lLjkntAHaKI%26pid%3DApi&f=1';
   }
 }
+
+/*Changes to make: refactor JS*/
