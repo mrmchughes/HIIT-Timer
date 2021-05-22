@@ -66,12 +66,12 @@ window.onload = function () {
   }
 
   function changeToRest() {
-    $("body").css("background", "#86BBD8");
+    $("body").css("background", "#87f5fb");
     statusDiv.innerText = "Rest Period";
   }
 
   function changeToWork() {
-    $("body").css("background", "#F26419");
+    $("body").css("background", "#de3c4b");
     statusDiv.innerText = "Push Yourself!";
   }
 }

@@ -6,13 +6,13 @@
 
 body {
   color: #fbfcff;
-  background-color: #86bbd8;
+  background-color: #87f5fb;
 }
 
 #cardSelector {
-  width: 45rem;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  width: 30rem;
+  margin-top: 60px;
+  margin-bottom: 60px;
   border: 1px solid black;
   border-radius: 15px;
   background-color: #2f4858;
@@ -26,9 +26,10 @@ body {
 
 .card-title {
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: 2rem;
   letter-spacing: 1.5px;
-  margin: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 #timer-div {
@@ -38,7 +39,8 @@ body {
 
 div.controls {
   padding: 5px;
-  margin: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   letter-spacing: 1px;
 }
 
@@ -48,11 +50,11 @@ div.controls {
 
 input {
   background: #f6ae2d;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 30px;
-  padding-right: 30px;
-  width: 100px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 75px;
   text-align: center;
   border-color: black;
   border-radius: 20px;
@@ -60,20 +62,20 @@ input {
 
 #status {
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: 2rem;
   letter-spacing: 1.5px;
   margin: 5px;
 }
 
 #sec {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin: 5px;
 }
 
 .btn {
   border: 2px solid black;
   text-align: center;
-  padding: 20px;
+  padding: 10px;
   margin: 10px;
   font-size: 1rem;
   width: 100px;
