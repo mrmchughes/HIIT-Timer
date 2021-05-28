@@ -68,13 +68,13 @@ window.onload = function () {
   function changeToRest() {
     $("body").css("background", "#87f5fb");
     statusDiv.innerText = "Rest Period";
-    document.getElementById("cardImg").src = 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.PvRKtXc8nMb5F27zSVjp1AHaHa%26pid%3DApi&f=1';
+    document.getElementById("cardImg").src = 'https://i5.walmartimages.com/asr/43087261-7dab-4ca4-8c0a-4fa318edada2_2.b9b7e071ff921d1d78fdccb37316fcc7.jpeg';
   }
 
   function changeToWork() {
     $("body").css("background", "#de3c4b");
     statusDiv.innerText = "Push Yourself!";
-    document.getElementById("cardImg").src = 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.KYnkGOLCF2UhXr3lLjkntAHaKI%26pid%3DApi&f=1';
+    document.getElementById("cardImg").src = 'https://fitatmidlife.com/wp-content/uploads/AirBike-Elite-by-Precor-748x1024.jpg';
   }
 }
 
